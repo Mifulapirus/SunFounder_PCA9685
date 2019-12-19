@@ -48,6 +48,7 @@ class PWM(object):
     RPI_REVISION_3_MODULE_B  = ["a02082", "a22082", "a32082"]
     RPI_REVISION_3_MODULE_BP = ["a020d3"]
     RPI_REVISION_3_MODULE_AP = ["9020e0"]
+    RPI_REVISION_Z_MODULE_W  = ["9000c1"]
 
     _DEBUG = False
     _DEBUG_INFO = 'DEBUG "PCA9685.py":'
