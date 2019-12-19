@@ -73,6 +73,8 @@ class PWM(object):
             return 1
         elif pi_revision == '3 Module A+':
             return 1
+        elif pi_revision == 'Zero Module W Rev 1.1':
+            return 1
 
     def _get_pi_revision(self):
         "Gets the version number of the Raspberry Pi board"
@@ -101,6 +103,8 @@ class PWM(object):
                         return '3 Module B+'
                     elif line[11:-1] in self.RPI_REVISION_3_MODULE_AP:
                         return '3 Module A+'
+                    elif line[11:-1] in self.RPI_REVISION_Z_MODULE_W:
+                        return 'Zero Module W Rev 1.1'
                     else:
                         print("Error. Pi revision didn't recognize, module number: %s" % line[11:-1])
                         print('Exiting...')
